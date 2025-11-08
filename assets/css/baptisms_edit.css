@@ -1,0 +1,132 @@
+/* ===== Bautizados — mismos estilos que Miembros ===== */
+.baptisms-page .container{ max-width:1200px; margin:0 auto; padding:24px }
+.baptisms-page .page-title{ text-align:center; margin:4px 0 10px }
+.baptisms-page .page-title h2{ font-size:42px; font-weight:900; letter-spacing:-0.02em; margin:0 }
+
+.baptisms-page .card{
+  background: rgba(255,255,255,0.22);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.35);
+  padding:12px;
+}
+.baptisms-page .card.fixed-box{ height:auto; min-height:0 }
+
+.baptisms-page .actions-top{ text-align:center; margin:0 0 28px 0 }
+.baptisms-page .table-wrap{ overflow-x:auto }
+.baptisms-page .table{ width:max-content; min-width:100%; border-collapse:collapse; table-layout:auto }
+.baptisms-page .table th, .baptisms-page .table td{
+  border-bottom:1px solid rgba(17,24,39,0.10);
+  padding:10px; text-align:center; vertical-align:middle; white-space:nowrap; font-size:15px; color:#111827;
+}
+.baptisms-page .table thead th{
+  background: rgba(255,255,255,0.28);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  backdrop-filter: blur(10px) saturate(140%);
+  border: 1px solid rgba(255,255,255,0.50);
+  font-weight:700; border-radius:10px;
+}
+
+/* Popovers */
+.baptisms-page .has-popover{ position:relative; display:inline-block; max-width:100%; overflow:hidden; text-overflow:ellipsis; cursor:help }
+.baptisms-page .has-popover:hover::after,
+.baptisms-page .has-popover:focus::after{
+  content: attr(data-popover);
+  position:absolute; left:50%; transform:translateX(-50%);
+  bottom:calc(100% + 10px); z-index:50;
+  max-width:min(480px,90vw);
+  padding:10px 12px; white-space:normal; color:#111827;
+  background:rgba(255,255,255,0.50);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  backdrop-filter: blur(14px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.60); border-radius:12px;
+  box-shadow:0 10px 24px rgba(0,0,0,0.16), inset 0 1px 0 rgba(255,255,255,0.35);
+}
+
+/* Botones glass con tintes */
+.baptisms-page .btn{ display:inline-block; padding:10px 14px; border-radius:14px; text-decoration:none; cursor:pointer; font-weight:700; border:1px solid transparent; transition: background .15s ease, transform .05s ease, box-shadow .15s ease }
+.baptisms-page .btn.small{ padding:6px 10px; font-size:14px }
+.baptisms-page .row-actions .btn{ margin-left:6px }
+.baptisms-page .btn.glass{
+  background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  backdrop-filter: blur(14px) saturate(180%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 8px 20px rgba(0,0,0,.12);
+}
+.baptisms-page .btn.glass-green{
+  color:#06391f !important; border-color: rgba(5,150,105,.65) !important;
+  background-image: linear-gradient(135deg, rgba(16,185,129,.30), rgba(16,185,129,.16)), linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+}
+.baptisms-page .btn.glass-green:hover{
+  background-image: linear-gradient(135deg, rgba(16,185,129,.40), rgba(16,185,129,.22)), linear-gradient(135deg, rgba(255,255,255,.22), rgba(255,255,255,.10));
+}
+.baptisms-page .btn.glass-orange{
+  color:#5c1c05 !important; border-color: rgba(234,88,12,.65) !important;
+  background-image: linear-gradient(135deg, rgba(249,115,22,.30), rgba(249,115,22,.16)), linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+}
+.baptisms-page .btn.glass-orange:hover{
+  background-image: linear-gradient(135deg, rgba(249,115,22,.40), rgba(249,115,22,.22)), linear-gradient(135deg, rgba(255,255,255,.22), rgba(255,255,255,.10));
+}
+.baptisms-page .btn.glass-red{
+  color:#5a0a0a !important; border-color: rgba(239,68,68,.65) !important;
+  background-image: linear-gradient(135deg, rgba(239,68,68,.30), rgba(239,68,68,.16)), linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+}
+.baptisms-page .btn.glass-red:hover{
+  background-image: linear-gradient(135deg, rgba(239,68,68,.40), rgba(239,68,68,.22)), linear-gradient(135deg, rgba(255,255,255,.22), rgba(255,255,255,.10));
+}
+.baptisms-page .btn.glass-notes{
+  color:#0b2a77 !important; border-color: rgba(59,130,246,.65) !important;
+  background-image: linear-gradient(135deg, rgba(59,130,246,.30), rgba(59,130,246,.16)), linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+}
+.baptisms-page .btn.glass-notes:hover{
+  background-image: linear-gradient(135deg, rgba(59,130,246,.40), rgba(59,130,246,.22)), linear-gradient(135deg, rgba(255,255,255,.22), rgba(255,255,255,.10));
+}
+
+/* Paginación */
+.baptisms-page .pagination{ display:flex; align-items:center; justify-content:center; gap:10px; margin:12px auto 0 }
+.baptisms-page .page-btn{ border:1px solid rgba(17,24,39,0.18); padding:6px 10px; border-radius:10px; text-decoration:none; color:#111827; background:#fff }
+.baptisms-page .page-btn.disabled{ pointer-events:none; opacity:.55 }
+.baptisms-page .page-info{ opacity:.8; font-size:14px }
+
+/* ===== Modal de Notas (IDs/clases únicos) ===== */
+#bap-notes-backdrop.bap-modal-backdrop{
+  position: fixed;
+  inset: 0;
+  display: none !important;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0,0,0,0.45);
+  z-index: 4000;
+}
+#bap-notes-backdrop.bap-modal-backdrop.show{ display:flex !important }
+#bap-notes-backdrop .bap-modal-dialog{
+  background: rgba(255,255,255,0.66);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 18px;
+  width: min(860px, 95vw);
+  max-height: 72vh;
+  box-shadow: 0 28px 80px rgba(0,0,0,.28);
+  display:flex; flex-direction:column;
+}
+#bap-notes-backdrop .modal-header{ display:flex; align-items:center; justify-content:space-between; padding:12px 14px }
+#bap-notes-backdrop .modal-header h3{ font-size:22px; font-weight:800; margin:0 }
+#bap-notes-backdrop .modal-close{
+  border:1px solid rgba(17,24,39,.18); background: rgba(255,255,255,.9);
+  border-radius:12px; width:32px; height:32px; cursor:pointer; line-height:30px; text-align:center;
+}
+#bap-notes-backdrop .modal-body{ padding:14px; color:#111827 }
+#bap-notes-backdrop .modal-pre{ font-size:18px; line-height:1.65; white-space:pre-wrap; word-break:break-word; max-height:56vh; overflow:auto; margin:0 }
+
+/* Responsive */
+@media (max-width:640px){
+  .baptisms-page .page-title h2{ font-size:34px }
+  .baptisms-page .table th, .baptisms-page .table td{ font-size:14px; padding:8px }
+  .baptisms-page .has-popover{ max-width:80vw }
+  #bap-notes-backdrop .bap-modal-dialog{ width:95vw; max-height:78vh }
+  #bap-notes-backdrop .modal-pre{ font-size:16px; max-height:60vh }
+}

@@ -1,0 +1,113 @@
+/* ===== Solicitudes — iOS-glass + tabla + paginación ===== */
+.requests-page .container{ max-width:1200px; margin:0 auto; padding:24px }
+
+/* Título */
+.requests-page .page-title{ text-align:center; margin:4px 0 10px }
+.requests-page .page-title h2{
+  font-size:42px; font-weight:900; letter-spacing:-0.02em; margin:0
+}
+
+/* Card / Box del listado */
+.requests-page .card{
+  background: rgba(255,255,255,0.22);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.35);
+  padding:12px;
+}
+.requests-page .card.fixed-box{ height:auto; min-height:0 }
+
+/* Tabla con scroll horizontal */
+.requests-page .table-wrap{ overflow-x:auto }
+.requests-page .table{
+  width:max-content; min-width:100%;
+  border-collapse:collapse; table-layout:auto;
+  font-size:15px; color:#111827;
+}
+.requests-page .table th,
+.requests-page .table td{
+  border-bottom:1px solid rgba(17,24,39,0.10);
+  padding:10px; text-align:center; vertical-align:middle; white-space:nowrap;
+}
+.requests-page .table thead th{
+  background: rgba(255,255,255,0.28);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  backdrop-filter: blur(10px) saturate(140%);
+  border: 1px solid rgba(255,255,255,0.50);
+  font-weight:700; border-radius:10px;
+}
+
+/* Botones estilo iOS glass con tintes */
+.requests-page .btn{
+  display:inline-block; padding:10px 14px; border-radius:14px;
+  text-decoration:none; cursor:pointer; font-weight:700;
+  border:1px solid transparent;
+  transition: background .15s ease, transform .05s ease, box-shadow .15s ease;
+}
+.requests-page .btn.small{ padding:6px 10px; font-size:14px }
+.requests-page .row-actions .btn{ margin-left:6px }
+
+.requests-page .btn.glass{
+  background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  backdrop-filter: blur(14px) saturate(180%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 8px 20px rgba(0,0,0,.12);
+}
+/* Ver / Detalle (azul) */
+.requests-page .btn.glass-notes{
+  color:#0b2a77 !important;
+  border-color: rgba(59,130,246,.65) !important;
+  background-image:
+    linear-gradient(135deg, rgba(59,130,246,.30), rgba(59,130,246,.16)),
+    linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+}
+.requests-page .btn.glass-notes:hover{
+  background-image:
+    linear-gradient(135deg, rgba(59,130,246,.40), rgba(59,130,246,.22)),
+    linear-gradient(135deg, rgba(255,255,255,.22), rgba(255,255,255,.10));
+}
+/* Aprobar (verde) */
+.requests-page .btn.glass-green{
+  color:#06391f !important;
+  border-color: rgba(5,150,105,.65) !important;
+  background-image:
+    linear-gradient(135deg, rgba(16,185,129,.30), rgba(16,185,129,.16)),
+    linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+}
+.requests-page .btn.glass-green:hover{
+  background-image:
+    linear-gradient(135deg, rgba(16,185,129,.40), rgba(16,185,129,.22)),
+    linear-gradient(135deg, rgba(255,255,255,.22), rgba(255,255,255,.10));
+}
+/* Rechazar (rojo) */
+.requests-page .btn.glass-red{
+  color:#5a0a0a !important;
+  border-color: rgba(239,68,68,.65) !important;
+  background-image:
+    linear-gradient(135deg, rgba(239,68,68,.30), rgba(239,68,68,.16)),
+    linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+}
+.requests-page .btn.glass-red:hover{
+  background-image:
+    linear-gradient(135deg, rgba(239,68,68,.40), rgba(239,68,68,.22)),
+    linear-gradient(135deg, rgba(255,255,255,.22), rgba(255,255,255,.10));
+}
+
+/* Paginación (idéntica a Miembros/Bautizados) */
+.requests-page .pagination{
+  display:flex; align-items:center; justify-content:center; gap:10px; margin:12px auto 0
+}
+.requests-page .page-btn{
+  border:1px solid rgba(17,24,39,0.18); padding:6px 10px; border-radius:10px;
+  text-decoration:none; color:#111827; background:#fff
+}
+.requests-page .page-btn.disabled{ pointer-events:none; opacity:.55 }
+.requests-page .page-info{ opacity:.8; font-size:14px }
+
+/* Responsive */
+@media (max-width:640px){
+  .requests-page .page-title h2{ font-size:34px }
+  .requests-page .table th, .requests-page .table td{ font-size:14px; padding:8px }
+}
