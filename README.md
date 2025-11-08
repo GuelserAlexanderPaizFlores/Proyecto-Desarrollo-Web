@@ -1,4 +1,4 @@
-# Iglesia — Backend (v3 con CSS por página)
+# Iglesia — Backend
 Cambios:
 - Contraseñas **sin hash** (solo dev), login por comparación directa.
 - Código de miembro **automático** (MAX(code)+1).
@@ -13,7 +13,3 @@ Cambios:
 - Bautizados: `assets/css/baptisms_index.css`, `baptisms_create.css`, `baptisms_edit.css`
 - Solicitudes: `assets/css/requests_index.css`, `requests_view.css`
 
-## Instalación
-1. Importa `sql/schema.sql` en MySQL.
-2. Copia la carpeta `iglesia` a tu servidor (ajusta `config/config.php` → `base_url`).
-3. Abre `http://localhost/iglesia/public/` y entra con **admin / admin123**.
