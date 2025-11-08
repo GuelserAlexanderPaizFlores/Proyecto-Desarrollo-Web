@@ -11,9 +11,3 @@ Cambios:
 - Login: `assets/css/login.css`
 - Miembros: `assets/css/members_index.css`, `members_create.css`, `members_edit.css`
 - Bautizados: `assets/css/baptisms_index.css`, `baptisms_create.css`, `baptisms_edit.css`
-- Solicitudes: `assets/css/requests_index.css`, `requests_view.css`
-
-## Instalación
-1. Importa `sql/schema.sql` en MySQL.
-2. Copia la carpeta `iglesia` a tu servidor (ajusta `config/config.php` → `base_url`).
-3. Abre `http://localhost/iglesia/public/` y entra con **admin / admin123**.
